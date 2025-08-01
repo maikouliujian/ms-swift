@@ -49,6 +49,7 @@ class TrainerFactory:
         else:
             train_method = args.task_type
         module_path, class_name = mapping[train_method].rsplit('.', 1)
+        # todo 动态导入：在运行时根据字符串路径（module_path）加载模块，而不是在代码开头用 import 静态导入
         module = importlib.import_module(module_path)
         return getattr(module, class_name)
 

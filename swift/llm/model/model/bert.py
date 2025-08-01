@@ -18,7 +18,7 @@ def get_model_tokenizer_modern_bert(model_dir, *args, **kwargs):
     kwargs['model_config'] = model_config
     return get_model_tokenizer_from_local(model_dir, *args, **kwargs)
 
-
+# todo 注册模型！！！！！！
 register_model(
     ModelMeta(
         BertModelType.modern_bert, [

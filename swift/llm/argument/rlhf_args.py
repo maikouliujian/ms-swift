@@ -62,7 +62,8 @@ class GRPOArguments(GRPOArgumentsMixin):
 
     truncation_strategy: Literal['delete', 'left', 'right', None] = None
 
-
+# todo RLHF（Reinforcement Learning from Human Feedback，基于人类反馈的强化学习）
+#  是一种结合强化学习（RL）和人类反馈的技术，主要用于训练AI模型（如大语言模型）更符合人类偏好
 @dataclass
 class RLHFArguments(TeacherModelArguments, GRPOArguments, PPOArguments, RewardModelArguments, RLHFArgumentsMixin,
                     TrainArguments):
